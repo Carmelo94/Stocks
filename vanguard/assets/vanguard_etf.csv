@@ -1,0 +1,82 @@
+﻿symbol,etf_name,asset_class
+BIV,Vanguard Intermediate-Term Bond ETF,Bond
+BLV,Vanguard Long-Term Bond ETF,Bond
+BND,Vanguard Total Bond Market ETF,Bond
+BNDW,Vanguard Total World Bond ETF,Bond
+BNDX,Vanguard Total International Bond ETF,Bond
+BSV,Vanguard Short-Term Bond ETF,Bond
+EDV,Vanguard Ext Duration Treasury ETF,Bond
+VCEB,Vanguard ESG U.S. Corporate Bond ETF,Bond
+VCIT,Vanguard Intermediate-Term Corporate Bond ETF,Bond
+VCLT,Vanguard Long-Term Corporate Bond ETF,Bond
+VCSH,Vanguard Short-Term Corporate Bond ETF,Bond
+VGIT,Vanguard Intermediate-Term Treasury ETF,Bond
+VGLT,Vanguard Long-Term Treasury ETF,Bond
+VGSH,Vanguard Short-Term Treasury ETF,Bond
+VMBS,Vanguard Mortgage-Backed Securities ETF,Bond
+VTC,Vanguard Total Corporate Bond ETF,Bond
+VTEB,Vanguard Tax-Exempt Bond Index ETF,Bond
+VTIP,Vanguard Short-Term Inflation-Protected Securities ETF,Bond
+VWOB,Vanguard Emerging Markets Government Bond ETF,Bond
+ESGV,Vanguard ESG U.S. Stock ETF,Equity
+IVOG,Vanguard S&P Mid-Cap 400 Growth ETF,Equity
+IVOO,Vanguard S&P Mid-Cap 400 ETF,Equity
+IVOV,Vanguard S&P Mid-Cap 400 Value ETF,Equity
+MGC,Vanguard Mega Cap ETF,Equity
+MGK,Vanguard Mega Cap Growth ETF,Equity
+MGV,Vanguard Mega Cap Value ETF,Equity
+VAW,Vanguard Materials ETF,Equity
+VB,Vanguard Small Cap ETF,Equity
+VBK,Vanguard Small Cap Growth ETF,Equity
+VBR,Vanguard Small Cap Value ETF,Equity
+VCR,Vanguard Consumer Discretionary ETF,Equity
+VDC,Vanguard Consumer Staples ETF,Equity
+VDE,Vanguard Energy ETF,Equity
+VEA,Vanguard FTSE Developed Markets ETF,Equity
+VEU,Vanguard FTSE All-World ex-US ETF,Equity
+VFH,Vanguard Financials ETF,Equity
+VFLQ,Vanguard U.S. Liquidity Factor ETF,Equity
+VFMF,Vanguard U.S. Multifactor ETF,Equity
+VFMO,Vanguard U.S. Momentum Factor ETF,Equity
+VFMV,Vanguard U.S. Minimum Volatility ETF,Equity
+VFQY,Vanguard U.S. Quality Factor ETF,Equity
+VFVA,Vanguard U.S. Value Factor ETF,Equity
+VGK,Vanguard FTSE Europe ETF,Equity
+VGT,Vanguard Information Technology ETF,Equity
+VHT,Vanguard Healthcare ETF,Equity
+VIG,Vanguard Dividend Appreciation ETF,Equity
+VIGI,Vanguard International Dividend Appreciation Index Fund,Equity
+VIOG,Vanguard S&P Small-Cap 600 Growth ETF,Equity
+VIOO,Vanguard S&P Small-Cap 600 ETF,Equity
+VIOV,Vanguard S&P Small-Cap 600 Value ETF,Equity
+VIS,Vanguard Industrial ETF,Equity
+VO,Vanguard Mid-Cap Index ETF,Equity
+VOE,Vanguard Mid-Cap Value ETF,Equity
+VONE,Vanguard Russell 1000 ETF,Equity
+VONG,Vanguard Russell 1000 Growth ETF,Equity
+VONV,Vanguard Russell 1000 Value ETF,Equity
+VOO,Vanguard S&P 500 ETF,Equity
+VOOG,Vanguard S&P 500 Growth ETF,Equity
+VOOV,Vanguard S&P 500 Value ETF,Equity
+VOT,Vanguard Mid-Cap Growth ETF,Equity
+VOX,Vanguard Communication Services ETF,Equity
+VPL,Vanguard FTSE Pacific ETF,Equity
+VPU,Vanguard Utilities ETF,Equity
+VSGX,Vanguard ESG International Stock ETF,Equity
+VSS,Vanguard FTSE All-World ex-US Small-Cap ETF,Equity
+VT,Vanguard Total World Stock ETF,Equity
+VTHR,Vanguard Russell 3000 ETF,Equity
+VTI,Vanguard Total Stock Market ETF,Equity
+VTV,Vanguard Value ETF,Equity
+VTWG,Vanguard Russell 2000 Growth ETF,Equity
+VTWO,Vanguard Russell 2000 ETF,Equity
+VTWV,Vanguard Russell 2000 Value ETF,Equity
+VUG,Vanguard Growth ETF,Equity
+VV,Vanguard Large Cap ETF,Equity
+VWO,Vanguard FTSE Emerging Markets ETF,Equity
+VXF,Vanguard Extended Market VIPERs ETF,Equity
+VXUS,Vanguard Total International Stock ETF,Equity
+VYM,Vanguard High Dividend Yield ETF,Equity
+VYMI,Vanguard International High Dividend Yield Index Fund,Equity
+VNQ,Vanguard Real Estate Index Fund,Real Estate
+VNQI,Vanguard Global ex-U.S. Real Estate Index Fund ETF,Real Estate
