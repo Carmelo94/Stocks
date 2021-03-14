@@ -8,12 +8,6 @@ import glob
 import os
 import re
 
-# try:
-#   import yfinance as yf
-# except:
-#   pip -qq install yfinance
-#   import yfinance as yf
-
 
 def github_repo_files(repo_url, ext='.csv'):
   '''
@@ -48,6 +42,7 @@ def github_repo_files(repo_url, ext='.csv'):
         github_data_urls = [os.path.join(raw_url, f) for f in github_data_files]
         max_file_date = str(max([int(f.split('_')[-1].split('.')[-2]) for f in github_data_files]))
         max_date = (datetime.strptime(max_file_date, '%Y%m%d')).strftime('%Y-%m-%d')
+        
         return {'github_data_urls':github_data_urls, 'max_date':max_date}
       
       else:
@@ -93,22 +88,20 @@ def get_yf_data(list_of_symbols, yf=None, start_date=None, end_date=None, verbos
   df = pd.concat(dfs_list, sort=False)
   return df
 
-def export_vanguard_data(df_results, export_path=None):
+def export_data(df_results, filename, export_path=None):
   '''
   Export results as csv to data folder.
   '''
+  # check dates
   min_date = datetime.strftime(df_results['Date'].min(), '%Y%m%d')
   max_date = datetime.strftime(df_results['Date'].max(), '%Y%m%d')
+  
+  filename_ = f"{filename}_{min_date}_{max_date}.csv"
 
-  if min_date==max_date:
-    raise Exception('No new data to export')
+  try:
+    df_results.to_csv(os.path.join(export_path, filename_), index=False)
+  except:
+    print(f'Invalid export_path {export_path}, exporting to current directory {os.getcwd()}')
+    df_results.to_csv(filename_, index=False)
 
-  filename = f"vanguard_etf_hist-daily_{min_date}_{max_date}.csv"
-
-  if export_path is None:
-    print(f'Exporting to {os.getcwd()}')
-    df_results.to_csv(filename, index=False)
-  else:
-    df_results.to_csv(os.path.join(export_path, filename), index=False)
-
-  print(filename)
+  print(filename_)
