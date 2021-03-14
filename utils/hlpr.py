@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import requests
 import time
+import json
 import glob
 import os
 import re
@@ -105,3 +106,41 @@ def export_data(df_results, filename, export_path=None):
     df_results.to_csv(filename_, index=False)
 
   print(filename_)
+
+def symbols_dict(create_new=True, path_to_files=None, export_json=True):
+  '''
+  Create a dictionary object of csv file containing symbol data.
+   Parameters:
+    create_new (bool): create new dictionary from csv files otherwise, import previous if exist
+    path_to_files (str): path with csv symbols, defaults to None
+    export_json (bool): export dictionary as .json, defaults to True
+  '''
+  json_filename = 'symbols.json'
+
+  if path_to_files is None:
+    raise Exception(f'Invalid path_to_files {path_to_files}')
+
+  if create_new:
+    dict_ = dict()
+    for f in glob.glob(os.path.join(path_to_files, '*csv')):
+      filename = os.path.split(f)[-1].split('.')[0]
+      dict_[filename] = dict()
+      df = pd.read_csv(f)
+      for s in df['symbol']:
+        dict_[filename][s] = dict()
+        for c in df.columns[1:]:
+          dict_[filename][s][c] = df[df['symbol']==s][c].values[0]
+
+    if export_json:
+      with open(os.path.join(path_to_files, json_filename), 'w') as fp:
+        json.dump(dict_, fp)
+
+  else:
+    print(f'Importing previous {json_filename} file')
+    if json_filename in os.listdir(path_to_files):
+      with open(os.path.join(path_to_files, json_filename)) as fp:
+        dict_ = json.load(fp) 
+    else:
+      raise Exception(f'No such file or directory {os.path.join(ASSETS_PATH, json_filename)}')
+
+  return dict_

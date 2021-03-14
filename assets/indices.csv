@@ -1,0 +1,6 @@
+﻿symbol,name,asset_class
+^GSPC,S&P 500,Index
+^DJI,Dow Jones Industrial Average,Index
+^IXIC,NASDAQ Composite,Index
+^W5000,Wilshire 5000 Total Market,Index
+^RUA, Russell 3000,Index
