@@ -54,12 +54,14 @@ def github_repo_files(repo_url, ext='.csv'):
     raise Exception(f'MissingSchema: {repo_url}')
 
 
-def get_yf_data(list_of_symbols, yf=None, start_date=None, end_date=None, verbose=False, sleep=0):
+def get_yf_data(list_of_symbols, yf=None, interval='1d', start_date=None, end_date=None, verbose=False, sleep=0):
   '''
   Get stock data using yFinance.
     Parameters:
       yf (obj): yf library
       list_of_symbols (list): list of symbols/tickers
+      interval (str): defaults to 1 day, Valid intervals: 1m,2m,5m,15m,30m,60m,90m,1h,1d,5d,1wk,1mo,3mo
+      interval (str): default to None, interval selection cutoff
       start_date (str): defaults to None, 'YYYY-MM-DDDD'
       end_date (str): defaults to None, 'YYYY-MM-DDDD'
       verbose (bool): show symbol output
@@ -81,12 +83,13 @@ def get_yf_data(list_of_symbols, yf=None, start_date=None, end_date=None, verbos
       print(f'{cnt}/{len(list_of_symbols)} {s}')
       cnt += 1
     ticker = yf.Ticker(s)
-    df_ticker = ticker.history(period='max', start=start_date, end=end_date).reset_index()
+    df_ticker = ticker.history(period='max', interval=interval, start=start_date, end=end_date).reset_index()
     df_ticker.insert(1, 'Symbol', s)
     dfs_list.append(df_ticker)
     time.sleep(sleep)
 
   df = pd.concat(dfs_list, sort=False)
+  
   return df
 
 def export_data(df_results, filename, export_path=None):
